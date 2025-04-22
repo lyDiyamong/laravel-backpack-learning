@@ -5,3 +5,4 @@
 <x-backpack::menu-item title="Categories" icon="la la-question" :link="backpack_url('category')" />
 <x-backpack::menu-item title="Brands" icon="la la-question" :link="backpack_url('brand')" />
 <x-backpack::menu-item title="Product images" icon="la la-question" :link="backpack_url('product-image')" />
+<x-backpack::menu-item title="Catalogs" icon="la la-question" :link="backpack_url('catalog')" />

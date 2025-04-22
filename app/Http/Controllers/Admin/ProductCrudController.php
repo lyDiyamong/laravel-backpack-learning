@@ -51,11 +51,6 @@ class ProductCrudController extends CrudController
             ->type('number')
             ->label('Price');
 
-        // Description (optional)
-        CRUD::column('description')
-            ->label('Description')
-            ->limit(50); // Limits text length
-
         // Category (shows name instead of ID)
         CRUD::column('category.name')
             ->label('Category');
@@ -65,9 +60,9 @@ class ProductCrudController extends CrudController
             ->label('Brand');
 
         // Status (if you have it)
-        CRUD::column('status')
+        CRUD::column('is_available')
             ->label('Status')
-            ->type('enum');
+            ->type('checkbox');
     }
 
     /**
