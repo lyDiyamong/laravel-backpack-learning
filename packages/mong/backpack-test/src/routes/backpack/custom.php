@@ -14,12 +14,9 @@ Route::group([
         (array) config('backpack.base.web_middleware', 'web'),
         (array) config('backpack.base.middleware_key', 'admin')
     ),
-    'namespace' => 'App\Http\Controllers\Admin',
+    'namespace' => 'Mong\BackpackTest\Controllers\Admin',
 ], function () { // custom admin routes
-    Route::crud('product', 'ProductCrudController');
-    Route::crud('category', 'CategoryCrudController');
-    Route::crud('brand', 'BrandCrudController');
-    Route::crud('product-image', 'ProductImageCrudController');
+    Route::crud('catalog', 'CatalogCrudController');
 }); // this should be the absolute last line of this file
 
 /**
