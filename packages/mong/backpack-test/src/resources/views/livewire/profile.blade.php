@@ -1,8 +1,23 @@
-{{-- <x-backpack::layout> --}}
-<div>
-    {{-- This is the view rendered by the Profile Livewire component --}}
-    <h1>Livewire Profile Component Content</h1>
-    <p>You can put your profile form or display logic here.</p>
-    {{-- Example: <input type="text" wire:model="name"> --}}
-</div>
-{{-- </x-backpack::layout> --}}
+<aside class="bg-black text-white p-6 rounded-lg w-full max-w-lg font-mono">
+    <div class="flex justify-between items-center">
+        <div class="flex space-x-2 text-red-500">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <p class="text-sm">bash</p>
+    </div>
+    <div class="mt-4">
+        <p class="text-green-400">$ npm install next</p>
+        <p class="text-white">+ next@10.2.3</p>
+        <p class="text-white">added 1 package, and audited 2 packages in 3s</p>
+        <p class="text-green-400">$</p>
+    </div>
+    
+    <h2>{{$name}}</h2>
+
+    <div>{{$count}}</div>
+
+    <button class="btn btn-primary" wire:click="increment">Increment</button>
+    <button class="btn btn-danger" wire:click="decrement">Decrement</button>
+</aside>
