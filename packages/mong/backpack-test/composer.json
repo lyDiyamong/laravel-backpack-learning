@@ -1,0 +1,25 @@
+{
+    "name": "mong/backpack-test",
+    "description": "Backpack Test",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mong"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mong\\BackpackTest\\": "src/"
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mong\\BackpackTest\\BackpackTestServiceProvider"
+            ]
+        }
+    }
+}
+
