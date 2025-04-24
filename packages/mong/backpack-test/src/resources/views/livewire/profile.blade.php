@@ -17,7 +17,8 @@
     <h2>{{$name}}</h2>
 
     <div>{{$count}}</div>
-
-    <button class="btn btn-primary" wire:click="increment">Increment</button>
-    <button class="btn btn-danger" wire:click="decrement">Decrement</button>
+    <div class="flex ">
+        <button class="btn btn-primary" wire:click="increment">Increment</button>
+        <button class="btn btn-danger" wire:click="decrement">Decrement</button>
+    </div>
 </aside>
