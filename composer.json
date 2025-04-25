@@ -21,7 +21,8 @@
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "livewire/livewire": "^3.6",
-        "mong/backpack-test": "dev-feature/catalog-package"
+        "mong/backpack-test": "dev-feature/telegram-chat",
+        "mong/api-setup": "dev-main"
     },
     "require-dev": {
         "backpack/generators": "^4.0",
