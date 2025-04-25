@@ -16,10 +16,12 @@ return new class extends Migration
             $table->string('name');
             $table->decimal('price', 10, 2);
             $table->boolean('is_available')->default(true);
+            $table->string('image')->nullable();
             $table->timestamps();
             // Foreign key
             $table->foreignId('category_id')->constrained('categories');
             $table->foreignId('brand_id')->constrained('brands');
+
         });
     }
 
