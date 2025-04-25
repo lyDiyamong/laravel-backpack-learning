@@ -20,6 +20,8 @@ Route::group([
     Route::crud('category', 'CategoryCrudController');
     Route::crud('brand', 'BrandCrudController');
     Route::crud('product-image', 'ProductImageCrudController');
+    Route::get('telegram_chat', 'TelegramChatController@index')->name('page.telegram_chat.index');
+    Route::get('telegram_announcement', 'TelegramAnnouncementController@index')->name('page.telegram_announcement.index');
 }); // this should be the absolute last line of this file
 
 /**

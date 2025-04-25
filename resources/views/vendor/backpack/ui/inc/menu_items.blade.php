@@ -20,3 +20,7 @@
 </x-backpack::menu-dropdown>
 
 <x-backpack::menu-item title="Profile" icon="la la-user" :link="backpack_url('profile')" />
+<x-backpack::menu-dropdown title="Telegram Management" icon="la la-paper-plane">
+    <x-backpack::menu-dropdown-item title="Telegram Chat" icon="la la-comment-alt" :link="backpack_url('telegram_chat')" />
+    <x-backpack::menu-dropdown-item title="Telegram Announcement" icon="la la-bell" :link="backpack_url('telegram_announcement')" />
+</x-backpack::menu-dropdown>
