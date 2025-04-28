@@ -107,14 +107,14 @@ class ProductCrudController extends CrudController
 
         CRUD::column('images')
             ->label('Images')
-            ->type('array')
+            ->type('model_function')
+            ->function_name('getImageThumbnails')
+            ->escaped(false)
             ->wrapper([
                 'element' => 'span',
                 'class' => 'd-flex flex-wrap gap-1'
-            ])
-            ->function(function ($value, $entry) {
-                return collect($entry->images)->pluck('image_url')->toArray();
-            });
+            ]);
+
 
         if (!request()->ajax() && $showWidgets) {
             $this->addProductWidgets();

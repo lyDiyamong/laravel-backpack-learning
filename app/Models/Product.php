@@ -47,6 +47,16 @@ class Product extends Model
     {
         return $this->hasMany(ProductImage::class);
     }
+
+    public function getImageThumbnails()
+    {
+        return collect($this->images)
+            ->pluck('image_url')
+            ->map(function ($url) {
+                return '<img src="' . asset('storage/' . $url) . '" height="50" style="object-fit:cover; border-radius: 4px;" />';
+            })
+            ->implode(' ');
+    }
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS
