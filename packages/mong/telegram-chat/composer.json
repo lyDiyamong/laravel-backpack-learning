@@ -1,0 +1,25 @@
+{
+    "name": "mong/telegram-chat",
+    "description": "Telegram Chat",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mong"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mong\\TelegramChat\\": "src/"
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mong\\TelegramChat\\TelegramChatServiceProvider"
+            ]
+        }
+    }
+}
+
