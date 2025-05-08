@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
-
+namespace Mong\TelegramChat\Controllers\Admin;
 use Illuminate\Routing\Controller;
 
 /**
@@ -13,14 +12,14 @@ class TelegramChatController extends Controller
 {
     public function index()
     {
-        return view('admin.telegram_chat', [
+        return view('telegram-chat::admin.telegram_chat', [
             'title' => 'Telegram Chat',
             'breadcrumbs' => [
                 trans('backpack::crud.admin') => backpack_url('dashboard'),
                 'TelegramChat' => false,
             ],
             'page' => 'resources/views/admin/telegram_chat.blade.php',
-            'controller' => 'app/Http/Controllers/Admin/TelegramChatController.php',
+            'controller' => 'Mong/TelegramChat/Controllers/Admin/TelegramChatController.php',
         ]);
     }
 }

@@ -2,9 +2,10 @@
 
 namespace Mong\TelegramChat\Models;
 
-use App\Models\TelegramMessage;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Mong\TelegramChat\Models\AnnouncementLog;
+use Mong\TelegramChat\Models\TelegramMessage;
 
 class TelegramUser extends Model
 {
@@ -21,11 +22,21 @@ class TelegramUser extends Model
 
     public function messages()
     {
-        return $this->hasMany(TelegramMessage::class, 'chat_id', 'user_id');
+        return $this->hasMany(TelegramMessage::class, 'chat_id', 'id');
+    }
+
+    public function lastMessage()
+    {
+        return $this->hasOne(TelegramMessage::class, 'chat_id', 'id')->latest();
     }
 
     public function announcementLogs()
     {
         return $this->hasMany(AnnouncementLog::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

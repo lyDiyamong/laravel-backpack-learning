@@ -12,6 +12,10 @@
             "Mong\\TelegramChat\\": "src/"
         }
     },
+    "require": {
+        "irazasyed/telegram-bot-sdk": "^3.15",
+        "pusher/pusher-php-server": "^7.2"
+    },
     "prefer-stable": true,
     "minimum-stability": "dev",
     "extra": {
@@ -22,4 +26,3 @@
         }
     }
 }
-

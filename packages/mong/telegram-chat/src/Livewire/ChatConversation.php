@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace Mong\TelegramChat\Livewire;
 
 use Livewire\Component;
 

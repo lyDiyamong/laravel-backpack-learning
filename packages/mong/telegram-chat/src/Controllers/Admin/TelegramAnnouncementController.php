@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Mong\TelegramChat\Controllers\Admin;
 
 use Illuminate\Routing\Controller;
 
@@ -13,14 +13,14 @@ class TelegramAnnouncementController extends Controller
 {
     public function index()
     {
-        return view('admin.telegram_announcement', [
+        return view('telegram-chat::admin.telegram_announcement', [
             'title' => 'Telegram Announcement',
             'breadcrumbs' => [
                 trans('backpack::crud.admin') => backpack_url('dashboard'),
                 'TelegramAnnouncement' => false,
             ],
             'page' => 'resources/views/admin/telegram_announcement.blade.php',
-            'controller' => 'app/Http/Controllers/Admin/TelegramAnnouncementController.php',
+            'controller' => 'Mong/Controllers/Admin/TelegramAnnouncementController.php',
         ]);
     }
 }

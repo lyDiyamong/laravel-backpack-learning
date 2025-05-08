@@ -38,9 +38,9 @@ class TelegramWebhookController extends Controller
 
             // Log::info('Message processed', $message->toArray());
 
-            // if ($message) {
-            //     $this->broadcastEvents($message);
-            // }
+            if ($message) {
+                $this->broadcastEvents($message);
+            }
 
             return response()->json(['status' => 'success']);
         } catch (\Exception $e) {

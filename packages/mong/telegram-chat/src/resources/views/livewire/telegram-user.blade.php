@@ -1,3 +1,0 @@
-<div>
-    Telegram User
-</div>
